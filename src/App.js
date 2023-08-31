@@ -1,9 +1,10 @@
 import React from "react";
-import Q5 from "./pages/Q5";
+import Q6 from "./pages/Q6";
+
 export default function App() {
   return (
     <>
-      <Q5 />
+      <Q6 />
     </>
   );
 }

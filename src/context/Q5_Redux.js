@@ -38,9 +38,38 @@ const counterSlice = createSlice({
     }
   }
 });
+//--------------------------------------------------------------
+let DefaultUserState = {
+  username: "",
+  password: "",
+  confirmpassword: "",
+  isValid: false
+};
+const userSlice = createSlice({
+  name: "user",
+  initialState: DefaultUserState,
+  reducers: {
+    setUsername(state, action) {
+      state.username = action.payload;
+    },
+    setPassword(state, action) {
+      state.password = action.payload;
+    },
+    setConfirmPassword(state, action) {
+      state.confirmpassword = action.payload;
+    },
+    setIsValid(state) {
+      debugger;
+      state.isValid = state.password === state.confirmpassword;
+    }
+  }
+});
 
-const store = configureStore({ reducer: counterSlice.reducer });
+const store = configureStore({
+  reducer: { counter: counterSlice.reducer, userlogin: userSlice.reducer }
+});
 
 export const CounterAction = counterSlice.actions;
+export const UserAction = userSlice.actions;
 
 export default store;

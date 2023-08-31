@@ -4,11 +4,10 @@ import { CounterAction } from "../context/Q5_Redux";
 export default function Q5_Counter() {
   const dispatch = useDispatch();
   const counter = useSelector((state) => {
-    return state.counter;
+    return state.counter.counter;
   });
   const toggle = useSelector((state) => {
-    debugger;
-    return state.toggle;
+    return state.counter.toggle;
   });
   const toggalCouner = () => {
     dispatch(CounterAction.toggleCounterSlice());
@@ -25,9 +24,10 @@ export default function Q5_Counter() {
   };
   return (
     <>
-      {counter}
-      {toggle ? "true" : "false"}
-      <hr />
+      <div>
+        {counter}
+        {toggle ? "true" : "false"}
+      </div>
       <button onClick={IncrementCouner}>+ count</button>
 
       <button onClick={DecrementCouner}>- count</button>
