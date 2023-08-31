@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { CounterAction } from "./Q5_Redux";
+import { CounterAction } from "../context/Q5_Redux";
 
 export default function Q5_Counter() {
   const dispatch = useDispatch();

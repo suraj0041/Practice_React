@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemContext, ThemUpdatecontext } from "./Q3_1";
+import { ThemContext, ThemUpdatecontext } from "../context/Q3_1";
 
 export default function Q3_2() {
   const themecontext = useContext(ThemContext);

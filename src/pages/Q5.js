@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import Q5_Counter from "./Q5_Counter";
-import store from "./Q5_Redux";
+import store from "../context/Q5_Redux";
 export default function Q5() {
   return (
     <>
